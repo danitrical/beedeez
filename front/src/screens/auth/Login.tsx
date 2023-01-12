@@ -46,7 +46,10 @@ export const Login: FC = () => {
   }, [isLoginSuccess]);
 
   useEffect(() => {
-    if (isSignUpSuccess && signUpData) dispatch(setUserData(signUpData));
+    if (isSignUpSuccess && signUpData) {
+      navigation.navigate(SCREENS.STATIONS);
+      dispatch(setUserData(signUpData));
+    }
   }, [isSignUpSuccess]);
 
   return (
