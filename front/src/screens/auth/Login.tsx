@@ -1,6 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
 import React, {FC, useEffect, useState} from 'react';
-import {Button, TextInput, View} from 'react-native';
+import {Button, Text, TextInput, View} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {useSignInUser, useSignUpUser} from '../../hooks';
 import {SCREENS} from '../../navigators/screens';
@@ -55,6 +55,8 @@ export const Login: FC = () => {
   return (
     <View style={styles.container}>
       <View style={styles.loginWrapper}>
+        <Text style={styles.heading2}>Welcome to Danitrical Den</Text>
+        <Text style={styles.heading3}>Enter Credentials to Explore</Text>
         <TextInput
           style={styles.textInput}
           placeholder={'Enter Email Address'}

@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   loginWrapper: {
-    width: '30vw',
+    width: 'auto',
   },
   textInput: {
     backgroundColor: 'white',
@@ -33,5 +33,15 @@ export const styles = StyleSheet.create({
     color: 'white',
     height: '50px',
     width: '150px',
+  },
+  heading3: {
+    fontSize: 15,
+    fontWeight: '600',
+    marginBottom: 20,
+  },
+  heading2: {
+    fontSize: 20,
+    fontWeight: '600',
+    marginBottom: 20,
   },
 });
