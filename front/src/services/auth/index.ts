@@ -4,12 +4,11 @@ export class AuthService {
   login = async (data: ILoginData) => {
     try {
       const url = `${BASEURL}/login`;
-      const response = axios.post(url, data, {
+      const response: any = axios.post(url, data, {
         timeout: 60000,
       });
 
-      console.log({response});
-      // if (response?.cookie) localStorage
+      localStorage.setItem('beedeezToken', response?.cookie);
     } catch (error) {
       return error;
     }
@@ -22,7 +21,6 @@ export class AuthService {
         timeout: 60000,
       });
 
-      console.log({response});
       // if (response?.cookie) localStorage
     } catch (error) {
       return error;

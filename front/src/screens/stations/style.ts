@@ -22,6 +22,7 @@ export const styles = StyleSheet.create({
     width: '40%',
   },
   rowFlex: {
+    alignItems: 'center',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -40,6 +41,10 @@ export const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: '600',
   },
+  heading2: {
+    fontSize: 15,
+    fontWeight: '400',
+  },
   row: {
     display: 'flex',
     flexDirection: 'row',
@@ -47,5 +52,12 @@ export const styles = StyleSheet.create({
   },
   w80: {
     width: '80%',
+  },
+  marginAll: {
+    margin: '20px',
+  },
+  maxH: {
+    maxHeight: '50%',
+    minHeight: '49%',
   },
 });

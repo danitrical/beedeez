@@ -1,13 +1,16 @@
+import {useNavigation} from '@react-navigation/native';
 import React, {FC, useEffect, useState} from 'react';
 import {Button, TextInput, View} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {useSignInUser, useSignUpUser} from '../../hooks';
+import {SCREENS} from '../../navigators/screens';
 import {setUserData} from '../../store/slices/auth';
 import {styles} from './style';
 
 export const Login: FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigation = useNavigation<any>();
 
   const dispatch = useDispatch();
 
@@ -36,8 +39,10 @@ export const Login: FC = () => {
   };
 
   useEffect(() => {
-    console.log({isLoginSuccess});
-    if (isLoginSuccess && loginData) dispatch(setUserData(loginData));
+    if (isLoginSuccess && loginData) {
+      dispatch(setUserData(loginData));
+      navigation.navigate(SCREENS.STATIONS);
+    }
   }, [isLoginSuccess]);
 
   useEffect(() => {

@@ -7,6 +7,8 @@ export const store = configureStore({
   preloadedState: {},
 });
 
+export type ReduxState = ReturnType<typeof store.getState>;
+
 export default () => {
   const persistor = persistStore(store);
   return {store, persistor};
